@@ -1,12 +1,11 @@
 ﻿@page
-@model BulkyWebRazor.Pages.Categories.EditModel
-@{
-}
+@model BulkyWebRazor.Pages.Categories.createModel
+
+
 <form method="post">
-    <input asp-for="Category.Id" />
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Update Category</h2>
+            <h2 class="text-primary">Create Category</h2>
         </div>
         <div asp-validation-summary="ModelOnly"></div>
         <div class="mb-3 row p-1">
@@ -21,10 +20,10 @@
         </div>
         <div class="row">
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-primary form-control">Edit</button>
+                <button type="submit" class="btn btn-primary form-control">Create</button>
             </div>
             <div class="col-6 col-md-3">
-                <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary border form-control">Back To List</a>
+                <a asp-page="/categories/index"  class="btn btn-outline-secondary border form-control">Back To List</a>
             </div>
         </div>
 
@@ -33,6 +32,6 @@
 
 @section Scripts {
     @{
-        <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial"/>
     }
 }
